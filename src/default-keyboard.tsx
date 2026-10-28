@@ -6,7 +6,7 @@ import {
   List,
   environment,
   showHUD,
-} from "@raycast/api";
+} from "@vicinae/api";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { KeyboardState } from "./lib/keyboard-state";
 import { createKeyboardShortcutLink } from "./lib/keyboard-shortcut";
@@ -89,12 +89,12 @@ export default function SwitchKeyboardLayout() {
         <Action.OpenInBrowser
           title="Open Advanced Keyboard Settings"
           url="ms-settings:keyboard-advanced"
-          icon={Icon.Gear}
+            icon={Icon.Cog}
         />
         <Action.OpenInBrowser
           title="Open Language Settings"
           url="ms-settings:regionlanguage"
-          icon={Icon.Globe}
+          icon={Icon.Globe01}
         />
       </ActionPanel>
     );
@@ -113,7 +113,7 @@ export default function SwitchKeyboardLayout() {
               : "Loading keyboards"
           }
           description={error}
-          icon={error ? Icon.ExclamationMark : Icon.Keyboard}
+          icon={error ? Icon.Exclamationmark : Icon.Keyboard}
           actions={actions()}
         />
       ) : (

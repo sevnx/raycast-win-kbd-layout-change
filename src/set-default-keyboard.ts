@@ -1,4 +1,4 @@
-import { LaunchProps, LaunchType, launchCommand, showHUD } from "@raycast/api";
+import { LaunchProps, LaunchType, launchCommand, showHUD } from "@vicinae/api";
 import {
   KeyboardShortcutTarget,
   readShortcutTarget,

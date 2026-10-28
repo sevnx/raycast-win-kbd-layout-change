@@ -93,11 +93,11 @@ public static class ActiveKeyboard
         for (int attempt = 0; attempt < 40; attempt++)
         {
             before = Read();
-            if (!before.processName.StartsWith("Raycast", StringComparison.OrdinalIgnoreCase)) break;
+            if (!before.processName.StartsWith("vicinae", StringComparison.OrdinalIgnoreCase)) break;
             Thread.Sleep(50);
         }
-        if (before.processName.StartsWith("Raycast", StringComparison.OrdinalIgnoreCase))
-            throw new InvalidOperationException("Raycast has not returned focus to your application. Close it and try again.");
+        if (before.processName.StartsWith("vicinae", StringComparison.OrdinalIgnoreCase))
+            throw new InvalidOperationException("Vicinae has not returned focus to your application. Close it and try again.");
 
         if (!PostMessage(new IntPtr(before.windowHandle), 0x0050, IntPtr.Zero, layout))
             throw new Win32Exception(Marshal.GetLastWin32Error(), "Windows blocked the application's keyboard switch request.");

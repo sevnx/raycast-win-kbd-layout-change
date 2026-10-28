@@ -1,3 +1,4 @@
 node_modules/
 dist/
 raycast-env.d.ts
+vicinae-env.d.ts

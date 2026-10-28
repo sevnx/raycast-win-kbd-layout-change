@@ -23,5 +23,5 @@ export function createKeyboardShortcutLink(
   inputTip: string,
 ): string {
   const context = encodeURIComponent(JSON.stringify({ inputTip }));
-  return `raycast://extensions/${encodeURIComponent(author)}/${encodeURIComponent(extension)}/set-default-keyboard?launchType=background&context=${context}`;
+  return `vicinae://extensions/${encodeURIComponent(author)}/${encodeURIComponent(extension)}/set-default-keyboard?launchType=background&context=${context}`;
 }

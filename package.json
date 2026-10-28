@@ -1,5 +1,5 @@
 {
-  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "$schema": "https://vicinae.com/schemas/extension.json",
   "name": "windows-default-keyboard",
   "title": "Keyboard Switcher",
   "description": "Switch the active Windows keyboard layout and save shortcuts for specific keyboards.",
@@ -16,7 +16,7 @@
     {
       "name": "default-keyboard",
       "title": "Switch Keyboard",
-      "description": "Switch the active keyboard in the application you return to after closing Raycast.",
+      "description": "Switch the active keyboard in the application you return to after closing Vicinae.",
       "mode": "view",
       "keywords": [
         "language",
@@ -33,12 +33,12 @@
     }
   ],
   "scripts": {
-    "build": "ray build -e dist -o dist",
-    "install:extension": "ray build -e dist",
-    "dev": "ray develop"
+    "build": "vici build",
+    "install:extension": "vici build",
+    "dev": "vici develop"
   },
   "dependencies": {
-    "@raycast/api": "2.9.0"
+    "@vicinae/api": "0.29.2"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import { closeMainWindow, environment } from "@raycast/api";
+import { closeMainWindow, environment } from "@vicinae/api";
 import { parseKeyboardState } from "./keyboard-state";
 import { executePowerShellFile } from "./powershell";
 
