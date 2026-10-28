@@ -22,6 +22,6 @@ export function createKeyboardShortcutLink(
   extension: string,
   inputTip: string,
 ): string {
-  const context = encodeURIComponent(JSON.stringify({ inputTip }));
-  return `vicinae://extensions/${encodeURIComponent(author)}/${encodeURIComponent(extension)}/set-default-keyboard?launchType=background&context=${context}`;
+  const args = encodeURIComponent(JSON.stringify({ inputTip }));
+  return `vicinae://launch/@${encodeURIComponent(author)}/${encodeURIComponent(extension)}/set-default-keyboard?arguments=${args}`;
 }

@@ -6,10 +6,14 @@ import {
 import { switchActiveKeyboard } from "./lib/windows";
 
 export default async function SwitchSavedKeyboardLayout({
+  arguments: args,
   launchContext,
-}: LaunchProps<{ launchContext: KeyboardShortcutTarget }>) {
+}: LaunchProps<{
+  arguments: { inputTip?: string };
+  launchContext: KeyboardShortcutTarget;
+}>) {
   try {
-    const target = readShortcutTarget(launchContext);
+    const target = readShortcutTarget(args?.inputTip !== undefined ? args : launchContext);
     if (!target) {
       await launchCommand({
         name: "default-keyboard",
